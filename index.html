@@ -29,7 +29,14 @@
       breed: 'chihuahua',
       age: 2,
       bark () {
-        console.log('Woof woof!')
+        console.log('Woof woof! My name is ' + this.name + '!')
+
+        const sayAge = () => {
+          console.log(this)
+          console.log('I am ' + this.age + ' years old!')
+        }
+
+        sayAge()
       },
       child: {
         name: 'Chicken',
@@ -38,7 +45,7 @@
         age: 0.5,
         toys: ['bone', 'stuffed bear', 'kong', 'pig ear'],
         bark () {
-          console.log('Yap yap!')
+          console.log('Yap yap! My name is ' + this.name + '!')
         }
       }
     }
@@ -53,8 +60,9 @@
     // console.log(pet.child.breed)
     // console.log(pet.child.toys[2])
 
-    // pet.bark()
+    pet.bark()
     // pet.child.bark()
+    // console.log(this)
 
   </script>
 </body>
